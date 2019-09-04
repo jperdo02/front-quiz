@@ -1,0 +1,28 @@
+li a, li text {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+a:hover{
+	text-decoration:none; 
+	color:red !important
+}
+
+a:active,a:visited,a:link{
+	text-decoration:none;
+	color:white
+}
+
+li{
+	display:block !important
+}
+
+.sub-item{
+	padding-left:0px;
+	color:black;
+	cursor:pointer
+}
