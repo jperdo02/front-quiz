@@ -32,8 +32,7 @@ const Product = ({ product, addProduct }) => {
   const onMouseOver = () => {
   
   var p=require(`../../../../static/products/${product.sku}_2.jpg`);
-  var pd="http://localhost:3000"+p
-  //window.alert("http://localhost:3000"+p);
+  var pd=window.location.origin+p;
   document.getElementById(product.sku).setAttribute("src", pd);
 	
   };
@@ -41,8 +40,7 @@ const Product = ({ product, addProduct }) => {
   const onMouseOut = () => {
   
   var p=require(`../../../../static/products/${product.sku}_1.jpg`);
-  var pd="http://localhost:3000"+p
-  //window.alert("http://localhost:3000"+p);
+  var pd=window.location.origin+p;
   document.getElementById(product.sku).setAttribute("src", pd);
 	
   };
