@@ -6,12 +6,14 @@ import Thumb from '../../../Thumb';
 import { formatPrice } from '../../../../services/util';
 import { addProduct } from '../../../../services/cart/actions';
 
+
 const Product = ({ product, addProduct }) => {
   product.quantity = 1;
 
   let formattedPrice = formatPrice(product.price, product.currencyId);
 
   let productInstallment;
+  
 
   if (!!product.installments) {
     const installmentPrice = product.price / product.installments;
@@ -26,21 +28,51 @@ const Product = ({ product, addProduct }) => {
       </div>
     );
   }
+  
+  const onMouseOver = () => {
+  
+  var p=require(`../../../../static/products/${product.sku}_2.jpg`);
+  var pd="http://localhost:3000"+p
+  //window.alert("http://localhost:3000"+p);
+  document.getElementById(product.sku).setAttribute("src", pd);
+	
+  };
+  
+  const onMouseOut = () => {
+  
+  var p=require(`../../../../static/products/${product.sku}_1.jpg`);
+  var pd="http://localhost:3000"+p
+  //window.alert("http://localhost:3000"+p);
+  document.getElementById(product.sku).setAttribute("src", pd);
+	
+  };
 
+  
   return (
+  
+    
     <div
       className="shelf-item"
       onClick={() => addProduct(product)}
+	  onMouseEnter={() => onMouseOver()}
+	  onMouseOut={() => onMouseOut()}
+	  
       data-sku={product.sku}
+	
     >
+	
       {product.isFreeShipping && (
         <div className="shelf-stopper">Envío gratis</div>
       )}
+	  
+	  
       <Thumb
+	    id={product.sku}
         classes="shelf-item__thumb"
         src={require(`../../../../static/products/${product.sku}_1.jpg`)}
         alt={product.title}
       />
+	
       <p className="shelf-item__title">{product.title}</p>
       <div className="shelf-item__price">
         <div className="val">

@@ -31,40 +31,40 @@ class Header extends React.Component{
 							//justifyContent:'space-between',
 							alingConten:'center',
 							flexWrap: 'wrap',
-							listStyleType:'none'}}>
+							listStyleType:'none'}} className="sticky">
 							
 				
 					<img width="15%" height="0%" src={require('../../../static/logo.png')}>
 					</img>
 					
 					
-					<li /*onClick={this.despliegaH}*/ class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-					<i class="fas fa-male">
+					<li /*onClick={this.despliegaH}*/ className="dropdown">
+					<a className="dropdown-toggle" data-toggle="dropdown" href="#">
+					<i className="fas fa-male">
 					</i> HOMBRE</a>
 						
-						<ul class="dropdown-menu"  
+						<ul className="dropdown-menu"  
 						/*style={{display:this.state.subMenuH ? 'block' : 'none', 
 								  }}*/>
-						<a class="sub-item"><li><i class="fas fa-male" style={{fontSize:'18pt'}}></i>Jeans</li></a>
-						<a class="sub-item"><li><i class="fas fa-tshirt"></i> Remeras</li></a>
+						<a className="sub-item"><li><i className="fas fa-male" style={{fontSize:'18pt'}}></i>Jeans</li></a>
+						<a className="sub-item"><li><i className="fas fa-tshirt"></i> Remeras</li></a>
 						</ul>
 					
 					</li>
 					
 					
-					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-						<i class="fas fa-female">
+					<li className="dropdown">
+						<a className="dropdown-toggle" data-toggle="dropdown" href="#">
+						<i className="fas fa-female">
 						</i> MUJER</a>
 												
-							<ul class="dropdown-menu">
-								<a class="sub-item"><li><i class="fas fa-female" style={{fontSize:'18pt'}}></i> Jeans</li></a>
-								<a class="sub-item"><li><i class="fas fa-tshirt"></i> Remeras</li></a>   
+							<ul className="dropdown-menu">
+								<a className="sub-item"><li><i className="fas fa-female" style={{fontSize:'18pt'}}></i> Jeans</li></a>
+								<a className="sub-item"><li><i className="fas fa-tshirt"></i> Remeras</li></a>   
 							</ul>
 					</li>
 										
-					<li><a href="#contacto"><i class="far fa-address-card"></i> CONTACTO</a></li>
+					<li><a href="#contacto"><i className="far fa-address-card"></i> CONTACTO</a></li>
 					
 					<form style={{marginLeft:'10%'}}>
 					<input type="text" name="name" />
